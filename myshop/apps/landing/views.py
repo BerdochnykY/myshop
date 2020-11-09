@@ -4,4 +4,4 @@ from django.http import HttpResponse
 
 
 def homepage(request):
-    return HttpResponse("Привет!")
+    return render(request, 'landing/homepage.html')
