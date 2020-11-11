@@ -20,6 +20,5 @@ from landing import views
 urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
-    path('landing/', include('landing.urls')),
     path('', include('landing.urls')),
 ]

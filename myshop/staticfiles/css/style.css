@@ -1,0 +1,26 @@
+body{
+    background-image:url(../img/bg002.jpg);
+    background-size: cover;
+}
+
+.section {
+    display:block;
+    background-image:url(../img/bg001.jpg);
+    background-size: cover;
+    height:auto;
+}
+
+.img-fluid {
+    height: auto;
+    width: 340px;
+}
+
+.section-top {
+    height:200px;
+    width: auto;
+}
+
+.title {
+    color: #9212E1;
+    text-align: center;
+}
