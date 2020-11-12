@@ -10,4 +10,8 @@ def homepage(request):
 
 def landing(request):
     form = SubscriberForm(request.POST or None)
-    return render(request, 'landing/landing.html')
+    if request.method == "POST" and form.is_valid():
+        data = form.cleaned_data
+
+        save_form = form.save()
+    return render(request, 'landing/landing.html', locals())
