@@ -1,4 +1,4 @@
-body{
+body {
     background-image:url(../img/bg002.jpg);
     background-size: cover;
 }
@@ -20,11 +20,21 @@ body{
     width: auto;
 }
 
-.title {
+.cursive {
+    font-family: cursive;
+}
+
+
+
+/*.title {
     color: #9212E1;
     text-align: center;
 }
 
 .forma1 {
+    text-align: center;
+}
+
+.form {
     text-align: center;
 }

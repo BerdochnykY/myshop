@@ -19,16 +19,29 @@
         <div class="row">
           <div class="col">
           </div>
-          <div class="col-lg-6 cursive text-center">
+          <div class="col-lg-6 cursive center">
             <h1>Test test test test test test test test test test</h1>
             <h1>test test test test test test test test test</h1>
             <div class="controls">
-                <form action="" method="post">{% csrf_token %}
-                  {{ form.as_p }}
-                  <div>
+                <form method="post">
+                  {% csrf_token %}
+                  {{ form.sub_name}}<br>
+                  {{ form.sub_email}}<br>
+                  <!--label for="your_name">Ваше имя: </label>
+                  <input id="your_name" type="text" name="your_name" class="form-control"><br>
+                  <label for="your_email">Ваша почта: </label>
+                  <input id="your_email" type="email" name="your_email" class="form-control"><br-->
+                  <div class="text-center">
                       <button class="btn btn-primary" type="submit" name="button">Отправить</button>
                   </div>
                 </form>
+
+  <!--               {% for su in subscribers %}
+                    <div class="alert alert-warning mt-2">
+                      <h3>{{ su.sub_name }}</h3>
+                      <p>{{ su.sub_email }}</p>
+                    </div>
+                  {% endfor %} -->
 
             </div>
           </div>

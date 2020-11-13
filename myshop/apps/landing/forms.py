@@ -1,8 +1,18 @@
-from django import forms
 from .models import *
+from django.forms import ModelForm, TextInput
 
-class SubscriberForm(forms.ModelForm):
+class SubscriberForm(ModelForm):
 
     class Meta:
         model = Subscriber
         exclude = [""]
+        widgets = {
+            "sub_name": TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Введите имя'
+            }),
+            "sub_email": TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Введите емейл'
+            }),
+        }
