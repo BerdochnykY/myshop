@@ -25,16 +25,19 @@ body {
 }
 
 
-
-/*.title {
-    color: #9212E1;
+.col-lg-6 {
+    position: relative;
+    top: 50px;
     text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-image:url(../img/bg002.jpg);
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #007BFF;
 }
 
-.forma1 {
-    text-align: center;
-}
-
-.form {
-    text-align: center;
+.container {
+    height: 500px;
+/*    overflow: scroll; */
 }

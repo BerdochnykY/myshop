@@ -20,4 +20,4 @@ def landing(request):
         'form': form
     }
     subscribers = Subscriber.objects.all()
-    return render(request, 'landing/landing0.html', context)
+    return render(request, 'landing/landing.html', context)
