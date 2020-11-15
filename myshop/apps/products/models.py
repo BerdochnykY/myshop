@@ -3,7 +3,8 @@ from django.db import models
 class Product(models.Model):
     name = models.CharField('Имя товара', max_length = 200, null=True, blank=True, default=None)
     price = models.DecimalField('Цена', max_digits=8, decimal_places=2, default=0)
-    description = models.TextField('Описание', null=True, blank=True, default=None)
+    short_description = models.TextField('Короткое описание', null=True, blank=True, default=None)
+    description = models.TextField('Полное описание', null=True, blank=True, default=None)
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
@@ -18,6 +19,7 @@ class Product(models.Model):
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, null=True, blank=True, default=None, on_delete = models.CASCADE)
     image = models.ImageField(upload_to='myshop/static/media/products_images/')
+    is_main = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)

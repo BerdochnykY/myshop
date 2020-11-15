@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os, sys
+from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,7 +47,9 @@ INSTALLED_APPS = [
     'landing',
     'orders',
     'products',
-]
+] 
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

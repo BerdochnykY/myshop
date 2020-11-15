@@ -4,29 +4,39 @@
 
 {% block content %}
 <div class="container">
+
+
   <div class="section-top">
-    <img src="{% static 'img/bg001.jpg' %}" class="img-fluid" alt="Responsive image">
+    <img src="{% static 'img/bg001.jpg' %}" >
   </div>
   <div class="section">
     <div class="container">
       <div class="row">
-        <div class="col-3">
-          123
-        </div>
-        <div class="col-3">
-          123
-        </div>
-        <div class="col-3">
-          123
-        </div>
-        <div class="col-3">
-          123
-        </div>
+
+        {% for prod_img in products_images %}
+            <div class="col-3">
+                <div class="product-item">
+                    <div class="">
+                        <img src="static {{ prod_img.image }}" class="img-responsive">
+                    </div>
+                    <h4>{{ prod_img.product.name }}</h4>
+                    <p>
+                        {{ prod_img.product.description|truncatechars_html:70 }}
+                    </p>
+                    <div class="">
+                        {{ prod_img.product.price }} UAH
+                    </div>
+                    <div class="add-to-card-btn">
+                        <button type="button" class="btn btn-success">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
       </div>
     </div>
   </div>
-  <div class="section-bottom">
-      <img src="{% static 'img/bg001.jpg' %}" class="img-fluid" alt="Responsive image">
-  </div>
-  </div>
+ </div>
 {% endblock %}
