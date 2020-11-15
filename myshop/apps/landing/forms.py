@@ -1,5 +1,5 @@
 from .models import *
-from django.forms import ModelForm, TextInput
+from django.forms import ModelForm, TextInput, EmailInput
 
 class SubscriberForm(ModelForm):
 
@@ -11,7 +11,7 @@ class SubscriberForm(ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Введите имя'
             }),
-            "sub_email": TextInput(attrs={
+            "sub_email": EmailInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Введите емейл'
             }),

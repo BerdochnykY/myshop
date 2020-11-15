@@ -6,10 +6,8 @@ class SubscriberAdmin(admin.ModelAdmin):
     exclude = [""]
     list_filter = ["sub_name"]
     search_fields = ["sub_name", "sub_email"]
+    
     class Meta:
         model = Subscriber
-
-
-
 
 admin.site.register(Subscriber, SubscriberAdmin)

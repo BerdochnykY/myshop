@@ -1,11 +1,13 @@
-body {
+html, body {
+    height: 100%;
+    max-height: 100%;
     background-image:url(../img/bg002.jpg);
     background-size: cover;
 }
 
 .section {
     display:block;
-    background-image:url(../img/bg001.jpg);
+    background-color: white;
     background-size: cover;
     height:auto;
 }
@@ -15,29 +17,29 @@ body {
     width: 340px;
 }
 
-.section-top {
-    height:200px;
-    width: auto;
-}
+
 
 .cursive {
     font-family: cursive;
 }
 
-
-.col-lg-6 {
-    position: relative;
-    top: 50px;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-image:url(../img/bg002.jpg);
+.otstup {
+    margin-left: 5px;
+}
+.otstup2 {
+    margin-left: 40px;
+}
+.col-lg-8 {
+    padding-top: 20px;
+    padding-bottom: 30px;
+/*    background-image:url(../img/bg002.jpg);
     border-radius: 10px;
     border: 1px solid;
-    border-color: #007BFF;
+    border-color: #007BFF;*/
 }
 
-.container {
-    height: 500px;
-/*    overflow: scroll; */
+.ppage {
+    height: 100%;
+    padding-top: 10%;
+    /*overflow: scroll;*/
 }
