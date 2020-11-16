@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    max-height: 100%;
+    background-image:url(../img/bg002.jpg);
+    background-size: cover;
+}
+
+.section {
+    display:block;
+    background-color: white;
+    background-size: cover;
+    height:auto;
+}
+
+.img-fluid {
+    height: auto;
+    width: 340px;
+}
+
+.cursive {
+    font-family: cursive;
+}
+
+.otstup {
+    margin-left: 5px;
+}
+.otstup2 {
+    margin-left: 40px;
+}
+.col-lg-8 {
+    padding-top: 20px;
+    padding-bottom: 30px;
+/*    background-image:url(../img/bg002.jpg);
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #007BFF;*/
+}
+
+.ppage {
+    height: 100%;
+    padding-top: 10%;
+    /*overflow: scroll;*/
+}

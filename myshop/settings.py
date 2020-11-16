@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import logging
 from pathlib import Path
 import os, sys
 from django.contrib import admin
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'landing',
     'orders',
     'products',
-] 
+]
 
 
 
@@ -132,7 +132,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+
+
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static/')
 STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'staticfiles'),)
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
+
+
+logger = logging.getLogger('cms')
+logger.setLevel(logging.INFO)
+cms_formatter = logging.Formatter('%(asctime)s  %(levelname)s  \t%(message)s')
+cms_file_handler = logging.FileHandler('./cms.log')
+cms_file_handler.setLevel(logging.INFO)
+cms_file_handler.setFormatter(cms_formatter)
+logger.addHandler(cms_file_handler)
+logger.info(MEDIA_ROOT)

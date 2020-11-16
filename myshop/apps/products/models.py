@@ -18,7 +18,7 @@ class Product(models.Model):
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, null=True, blank=True, default=None, on_delete = models.CASCADE)
-    image = models.ImageField(upload_to='myshop/static/media/products_images/')
+    image = models.ImageField(upload_to='products_images/')
     is_main = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
