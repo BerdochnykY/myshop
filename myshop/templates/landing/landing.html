@@ -16,14 +16,13 @@
             <h2>Мы скоро откроемся!</h2>
             <h4>Заполните эту форму, и мы сообщим, когда это случится:</h4><br>
             <div class="controls">
-                <form method="post" class="form-inline otstup2">{% csrf_token %}
-                    <label for="InputName1">Ваше имя:</label>
+                <form method="post" class="form-inline">{% csrf_token %}
                     <div class="form-group" id="InputName1">
+                      <label for="InputName1">Ваше имя:</label>
                         {{ form.sub_name }}
                     </div>
-
-                    <label for="InputEmail1">Емейл:</label>
                     <div class="form-group" id="InputEmail1">
+                      <label for="InputEmail1">Емейл:</label>
                         {{ form.sub_email }}
                     </div>
                       <button class="btn btn-primary otstup" type="submit" name="button">Отправить</button>
