@@ -1,27 +1,45 @@
-html {
-    height: 100%;
-    max-height: 100%;
-}
-.wrapper {
+html, body {
     height: 100%;
     max-height: 100%;
     background-image:url(../img/bg002.jpg);
 /*    background-color: #FFE7D7;*/
 }
 
+.mb-4 {
+  margin-bottom: 0!important;
+}
+
 .section-top {
     margin: 20px;
+    height: 400px;
+}
+
+.section {
+  margin: 40px;
 }
 
 .product-item {
     height: 400px;
-    background-color: lightgray;
+    background-color: white;
     border: 1px solid gray;
     position: relative;
-    padding: 10px;
+    padding: 10px 0 10px 0;
     text-align: center;
     border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
+.discount-container {
+  position: absolute;
+  top: 35%;
+  background: #28A745;
+  width: 25%;
+  color: white;
+  font-weight: 700;
+  padding: 3px;
+}
+
 
 .add-to-card-btn {
     position: absolute;
@@ -31,4 +49,10 @@ html {
 
 .imp-item {
     border-radius: 5px;
+}
+
+.footer {
+  margin-bottom: -100;
+  background-color: white;
+  height: 200px;
 }

@@ -7,8 +7,15 @@ from products.models import *
 
 
 def homepage(request):
-    products_images = ProductImage.objects.filter(is_active=True, is_main=True)
+    products_images = ProductImage.objects.filter(is_active=True, is_main=True, product__is_active=True)
+    products_images_shi = products_images.filter(product__type__id=2)
+    products_images_zap = products_images.filter(product__type__id=1)
+
     return render(request, 'landing/homepage.html', locals())
+
+
+
+
 
 
 def landing(request):
