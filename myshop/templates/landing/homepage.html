@@ -18,35 +18,15 @@
           </h1>
         </div>
         {% for prod_img in products_images %}
-            <div class="col-3">
-                <div class="product-item">
-                    <div class="img-icon">
-                        <img src="{{ prod_img.image.url }}" width="150px" height="180px" class="imp-item">
-                    </div>
-
-<!--                    {% if prod_img.product.discount %}
-                    <div class="discount-container">
-                        <span> 10% </span>
-                    </div>
-                    {% endif %}
--->
-                    <h4>{{ prod_img.product.name }}</h4>
-                    <p>
-                        {{ prod_img.product.description|truncatechars_html:60 }}
-                    </p>
-                    <div>
-                        {{ prod_img.product.price }} UAH
-                    </div>
-                    <div class="add-to-card-btn">
-                        <button type="button" class="btn btn-success">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-            </div>
+            {% include 'landing/product_item.html' %}
         {% endfor %}
-
       </div>
+    </div>
+  </div>
+
+  <div class="section section-delivery">
+    <div >
+      <h3>Free shiping</h3>
     </div>
   </div>
 
@@ -59,25 +39,7 @@
           </h1>
         </div>
         {% for prod_img in products_images_shi %}
-            <div class="col-3">
-                <div class="product-item">
-                    <div class="img-icon">
-                        <img src="{{ prod_img.image.url }}" width="150px" height="180px" class="imp-item">
-                    </div>
-                                            <h4>{{ prod_img.product.name }}</h4>
-                    <p>
-                        {{ prod_img.product.description|truncatechars_html:60 }}
-                    </p>
-                    <div>
-                        {{ prod_img.product.price }} UAH
-                    </div>
-                    <div class="add-to-card-btn">
-                        <button type="button" class="btn btn-success">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-            </div>
+            {% include 'landing/product_item.html' %}
         {% endfor %}
 
       </div>
@@ -93,25 +55,7 @@
           </h1>
         </div>
         {% for prod_img in products_images_zap %}
-            <div class="col-3">
-                <div class="product-item">
-                    <div class="img-icon">
-                        <img src="{{ prod_img.image.url }}" width="150px" height="180px" class="imp-item">
-                    </div>
-                    <h4>{{ prod_img.product.name }}</h4>
-                    <p>
-                        {{ prod_img.product.description|truncatechars_html:60 }}
-                    </p>
-                    <div>
-                        {{ prod_img.product.price }} UAH
-                    </div>
-                    <div class="add-to-card-btn">
-                        <button type="button" class="btn btn-success">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-            </div>
+            {% include 'landing/product_item.html' %}
         {% endfor %}
 
       </div>
