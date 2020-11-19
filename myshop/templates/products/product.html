@@ -8,7 +8,9 @@
 
       <div class="col-lg-6">
         {% for im in product.productimage_set.all %}
+        <div class="product-image-item">
           <img src="{{ im.image.url }}" class="img-responsive">
+        </div>
         {% endfor %}
       </div>
 
@@ -33,7 +35,7 @@
               <a class="nav-link" data-toggle="tab" href="#opinion">Отзывы</a>
             </li>
           </ul>
-          <div class="tab-content">
+          <div class="tab-content prod-description-tabs">
             <div class="tab-pane fade show active" id="description">
               {{product.description}}
             </div>
@@ -44,7 +46,19 @@
               Отзывы...
             </div>
           </div>
+          <div>
+            <form class="form-inline" id="form_buying_product" >
+              <input type="number" class="form-control" name="number" id="number">
+              <button type="submit" id="submit_btn" class="btn btn-success"
+                data-product_id = "{{ product.id }}"
+                data-name = "{{ product.name }}"
+                data-price = "{{ product.price }}"
+              >
+                  Купить
+              </button>
+            </form>
 
+          </div>
       </div>
 
 
