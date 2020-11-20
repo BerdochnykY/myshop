@@ -12,6 +12,12 @@ $(document).ready(function(){
     var product_price = submit_btn.data("price");
     console.log(product_id);
     console.log(product_name);
-  })
+  });
 
-})
+  $('.basket-container').hover(function() {
+    $('.basket-items').show();
+  },
+  function() {
+    $('.basket-items').hide();
+    });
+});

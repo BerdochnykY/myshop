@@ -98,3 +98,23 @@ body {
 .cash {
   margin-right: 25px;
 }
+
+
+
+
+.basket-container {
+  position: relative;
+  vertical-align: middle;
+}
+
+.basket-items {
+  display: none;
+  border: 1px solid #00DE00;
+  border-radius: 10px;
+  position: absolute;
+  left: -50px;
+  top: 38px;
+  width: 400px;
+  padding: 5px;
+  background-color: #00DE00;
+}
