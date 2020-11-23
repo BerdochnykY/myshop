@@ -9,10 +9,7 @@ body {
   height: 20px;
   background-color: #009B00;
   border: none;
-
 }
-
-
 
 .mb-4 {
   margin-bottom: 0!important;
@@ -51,7 +48,6 @@ body {
   padding: 3px;
 }
 
-
 .add-to-card-btn {
     position: absolute;
     bottom: 20px;
@@ -61,7 +57,6 @@ body {
 .imp-item {
     border-radius: 5px;
 }
-
 
 .footer {
   position: relative;
@@ -91,16 +86,11 @@ body {
     color: white;
     background-color: green;
     padding: 8px;
-
 }
-
 
 .cash {
   margin-right: 25px;
 }
-
-
-
 
 .basket-container {
   position: relative;
