@@ -20,4 +20,5 @@ $(document).ready(function(){
   function() {
     $('.basket-items').hide();
     });
+
 });

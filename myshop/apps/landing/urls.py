@@ -6,4 +6,5 @@ app_name = 'landing'
 urlpatterns = [
     path('', views.homepage),
     path('land/', views.landing),
+    path('popup/', views.popup),
 ]

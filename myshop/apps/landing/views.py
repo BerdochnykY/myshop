@@ -30,3 +30,8 @@ def landing(request):
     }
     subscribers = Subscriber.objects.all()
     return render(request, 'landing/landing.html', context)
+
+
+def popup(request):
+
+    return render(request, 'landing/link1.html', locals())
