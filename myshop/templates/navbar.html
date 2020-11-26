@@ -21,11 +21,18 @@
       </ul>
 
           <div class="basket-container">
-            <a href="#" class="btn btn-warning cash">Корзина</a>
+            <a href="#" class="btn btn-warning cash">Корзина<span id="basket_total_amount"></span><span id="basket_total_nmb">
+                {% if products_total_nmb %}
+                    ({{ products_total_nmb }})
+                {% else %}
+                    (0)
+                {% endif %}
+            </span></a>
             <div class="basket-items">
               <ul>
-                <li>asd</li>
-                <li>asd</li>
+                {% for product_in_basket in products_in_basket %}
+                    <li>{{ product_in_basket.product.name }}, {{product_in_basket.nmb}} шт. по {{product_in_basket.price_per_item}} грн.</li>
+                {% endfor %}
               </ul>
             </div>
           </div>

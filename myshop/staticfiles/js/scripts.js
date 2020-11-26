@@ -33,6 +33,13 @@ console.log(data)
          console.log(data.products_total_nmb)
          if (data.products_total_nmb) {
            $('#basket_total_nmb').text("("+data.products_total_nmb+")");
+           console.log(data.products);
+           $('.basket-items ul').html("");  // для очистки страницы перед обновлением формы
+           $.each(data.products, function(k, v) {
+               $('.basket-items ul').append('<li>'+v.name+', ' + v.nmb + ' шт. ' + 'по ' + v.price_per_item + ' грн  ' +
+           //Хрестик для удаления     // '<a class="delete-item" href="">x</span>'+
+                 '</li>');
+           })
          }
 
        },
@@ -42,9 +49,9 @@ console.log(data)
      });
 console.log(url)
 
-    $('.basket-items ul').append('<li>'+product_name+', ' + nmb + 'шт. ' + 'по ' + product_price + 'грн  ' +
-      '<a class="delete-item" href="">x</span>'+
-      '</li>');
+//    $('.basket-items ul').append('<li>'+product_name+', ' + nmb + ' шт. ' + 'по ' + product_price + ' грн  ' +
+//Хрестик для удаления     // '<a class="delete-item" href="">x</span>'+
+//      '</li>');
 
   });
 
@@ -54,8 +61,10 @@ console.log(url)
   },
   function() {
     $('.basket-items').hide();
-    });
+    }
+);
 
+//формула для удаления елемента
   $(document).on('click', '.delete-item', function(){
     $(this).closest('li').remove()
   })

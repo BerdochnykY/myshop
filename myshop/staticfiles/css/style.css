@@ -95,6 +95,7 @@ body {
 .basket-container {
   position: relative;
   vertical-align: middle;
+  z-index: 100;
 }
 
 .basket-items {
