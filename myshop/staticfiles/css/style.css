@@ -108,3 +108,14 @@ body {
   padding: 5px;
   background-color: #00DE00;
 }
+
+.delete-item {
+  color:red;
+  text-decoration: none;
+}
+
+.delete-item:hover {
+  font-weight: bold;
+  color:red;
+  text-decoration: none;
+}

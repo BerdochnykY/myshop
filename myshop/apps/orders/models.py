@@ -76,3 +76,29 @@ def product_in_order_post_save(sender, instance, created, **kwargs):
     instance.order.save(force_update=True)
 
 post_save.connect(product_in_order_post_save, sender=ProductInOrder)
+
+
+class ProductInBasket(models.Model):
+    session_key = models.CharField(max_length=256, blank=True, null=True, default=None)
+    order = models.ForeignKey(Order, blank=True, null=True, default=None, on_delete = models.CASCADE)
+    product = models.ForeignKey(Product, blank=True, null=True, default=None, on_delete = models.CASCADE)
+    nmb = models.IntegerField(default=1)
+    price_per_item = models.DecimalField('Цена за шт.',max_digits=8, decimal_places=2, default=0)
+    total_price = models.DecimalField('Общая стоимость', max_digits=8, decimal_places=2, default=0)
+    is_active = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True, auto_now=False)
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+    def __str__(self):
+        return self.product.name
+
+    class Meta:
+        verbose_name = 'Товар в корзине'
+        verbose_name_plural = 'Товары в корзине'
+
+    def save(self, *args, **kwargs):
+        price_per_item = self.product.price
+        self.price_per_item = price_per_item
+        self.total_price = int(self.nmb) * self.price_per_item
+
+        super(ProductInBasket, self).save(*args, **kwargs)
