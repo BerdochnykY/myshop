@@ -31,7 +31,11 @@
             <div class="basket-items">
               <ul>
                 {% for product_in_basket in products_in_basket %}
-                    <li>{{ product_in_basket.product.name }}, {{product_in_basket.nmb}} шт. по {{product_in_basket.price_per_item}} грн.</li>
+                    <li>
+                      {{ product_in_basket.product.name }}, {{product_in_basket.nmb}} шт.
+                      по {{product_in_basket.price_per_item}} грн.
+                      <a class="delete-item" href="">x</a>
+                    </li>
                 {% endfor %}
               </ul>
             </div>
